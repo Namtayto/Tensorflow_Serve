@@ -8,8 +8,6 @@ EXPOSE 8080
 # The `--chown` option ensures the correct permissions
 COPY Malicious_URL_Prediction /models/Malicious_URL_Prediction/1
 
-# Specify the model name and version for TensorFlow Serving
-ENV MODEL_NAME=Malicious_URL_Prediction/1
 
 # Run TensorFlow Serving with the model
-CMD ["tensorflow_model_server", "--model_base_path=/models", "--model_name=Malicious_URL_Prediction/1", "--rest_api_port=8080"]
+CMD ["tensorflow_model_server", "--model_base_path=/models", "--model_name=Malicious_URL_Prediction", "--rest_api_port=8080"]
