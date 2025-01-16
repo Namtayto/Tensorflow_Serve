@@ -6,7 +6,7 @@ EXPOSE 8501
 
 # Copy the saved model into the model directory for TensorFlow Serving
 # The `--chown` option ensures the correct permissions
-COPY Malicious_URL_Prediction /models/Malicious_URL_Prediction
+COPY Malicious_URL_Prediction /models/Malicious_URL_Prediction/1
 
 # Specify the model name and version for TensorFlow Serving
 ENV MODEL_NAME=Malicious_URL_Prediction
